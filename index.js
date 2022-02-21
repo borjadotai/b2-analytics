@@ -40,7 +40,7 @@ class Client {
 
     async setUp() {
         this._producer = kafka.producer()
-        this._consumer = kafka.consumer({ groupId: this.id })
+        this._consumer = kafka.consumer({ groupId: 'test-group' })
 
         await this._producer.connect()
         await this._consumer.connect()
